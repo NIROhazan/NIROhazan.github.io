@@ -1,0 +1,161 @@
+<!Nir Hazan 316009489 Omer Bidoush 311528657 >
+<!DOCTYPE html >
+<html lang="en">
+<head >
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+   <p style="text-align: center;">Mittzi net is a animal shop where you can find all the equipement you need!<br></p>
+
+    <div class="logo-container">
+        <img style="text-align: center;" src="https://scontent.ftlv18-1.fna.fbcdn.net/v/t39.30808-6/305577991_444200394395837_3255036029769933587_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_ohc=PLm2lm1e5bUQ7kNvgF8IZQ6&_nc_ht=scontent.ftlv18-1.fna&oh=00_AfCMjrPi4ZPVtAa0wrXLmmbw917wa3vPR5Rnjx3Y1DFAlA&oe=66420EB4" alt="Mitzzi-Net Logo" class="logo">
+       <h1 style="background-color: #0056b3;color: red;text-align: center;">Mitzzi-Net</h1>
+        <p>A network of possibilities</p>
+      </div>
+    <style>
+        :a.highlight:hover {
+          color: #e20ea2;
+          font-size: 100px;
+        } 
+        
+        </style>
+</head> 
+
+<script>
+ 
+  alert('Welcome to MITZZI-NET SHOP PLEASE REGISTER !')
+</script>
+<link rel="stylesheet" href="styles.css">
+
+<body>
+<title>Registration Form</title>
+<style>
+
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .form-group {
+    margin-bottom: 20px;
+  }
+  .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  .form-group input:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+  .form-group button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .form-group button:hover {
+    background-color: #0056b3;
+  }
+</style>
+</head>
+<body>
+
+  <title>Registration Form</title>
+  <style>
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    .form-group input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .form-group2 input:invalid { 
+      border-color: red;
+    }
+    .form-group small {
+      color: #888;
+    }
+  </style>
+  </head>
+  <body>
+  
+  <div class="container">
+    <h2>Registration Form</h2>
+    <form id="registrationForm">
+      <div class="form-group">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required>
+      </div>
+      <div class="form-group">
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required>
+      </div>
+      <div class="form-group">
+        <label for="phoneNumber">Phone Number:</label>
+        <input type="tel" id="phoneNumber" name="phoneNumber" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+        <small>Format: 123-456-7890</small>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group2">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" minlength="8" required>
+      </div>
+      <div class="form-group2">
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" minlength="8" required>
+      </div>
+      <div class="form-group">
+        <button type="submit">Register</button>
+      </div>
+    </form>
+  </div>
+  
+  <script>
+ document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            var password = document.getElementById('password').value;
+            if (password.length < 8) {
+                document.getElementById('password').setCustomValidity('Password must be at least 8 characters long.');
+                event.preventDefault();
+            } else {
+                document.getElementById('password').setCustomValidity('');
+            }
+  });
+  </script>
+  
+  </body>
+</body>
+</html>
