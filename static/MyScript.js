@@ -1,3 +1,4 @@
+//Nir Hazan 316009489 Omer Bidoush 311528657 ,  NIROhazan.github.io 
 document.addEventListener("DOMContentLoaded", function () {
   alert("Welcome");
   var registrationForm = document.getElementById("registrationForm");
