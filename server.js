@@ -7,10 +7,10 @@ const path = require("path");
 // MongoDB connection
 const db = mongojs(
   "mongodb+srv://Student:webdev2024student@cluster0.uqyflra.mongodb.net/webdev2024",
-  ["mitzinet_<Nir_Hazan_Omer_Bisdush>"]
+  ["mitzinet_<Nir_Hazan_Omer_Bidoush>"]
 );
 
-const users = db.collection("mitzinet_<Nir_Hazan_Omer_Bisdush>");
+const users = db.collection("mitzinet_<Nir_Hazan_Omer_Bidoush>");
 
 const app = express();
 app.use(express.json()); // Middleware to parse JSON body
