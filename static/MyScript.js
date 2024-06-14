@@ -1,6 +1,6 @@
-//Nir Hazan 316009489 Omer Bidoush 311528657 ,  NIROhazan.github.io 
+//<!Nir Hazan 316009489 Omer Bidoush 311528657 ,  NIROhazan.github.io >
 document.addEventListener("DOMContentLoaded", function () {
-  alert("Welcome");
+  alert("Welcome , Please Register ! ");
   var registrationForm = document.getElementById("registrationForm");
   registrationForm.addEventListener("submit", function (event) {
     // Prevent the form from submitting initially in each part
@@ -57,31 +57,36 @@ document.addEventListener("DOMContentLoaded", function () {
     // If all validations pass, submit the form
   });
 
-  // Event listener for email input blur to check if email exists
+  // Event listener for email input to check if email exists
   document.getElementById("email").addEventListener("blur", checkEmail);
-  document
-    .getElementById("deleteForm")
-    .addEventListener("submit", function (event) {
-      event.preventDefault();
-
-      const email = document.getElementById("email").value;
-      const password = document.getElementById("password").value;
-
-      const response = fetch("/delete-record", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email: email, password: password }),
-      });
-
-      if (response.ok) {
-        alert("succsess");
-      } else {
-        alert("Error delete user ");
-      }
-    });
 });
+document
+  .getElementById("deleteForm")
+  .addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent the form from submitting the traditional way
+
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    fetch("/delete-user", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ email: email, password: password }),
+    })
+      .then((response) => response.text())
+      .then((data) => {
+        alert(data); // Display server response
+        if (response.ok) {
+          window.location.href = "/";
+        }
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+        alert("Error deleting user");
+      });
+  });
 async function checkEmail() {
   const emailInput = document.getElementById("email");
   const email = emailInput.value;
